@@ -1,0 +1,31 @@
+--- Duplicate Records ---
+Customers exact duplicates (ignoring customer_id): 500
+Orders exact duplicates (ignoring order_id): 0
+Products exact duplicates (ignoring product_id): 38
+Order Items exact duplicates (ignoring order_item_id): 5
+
+--- Integrity Constraints ---
+Integrity check (Orders -> Customers) - Orphans found: 3494
+Integrity check (Items -> Orders) - Orphans found: 0
+Integrity check (Items -> Products) - Orphans found: 22772
+
+--- Invalid Values & Format Checks ---
+Orders with unparseable order_date formats: 0
+Orders where ship date is logically before order date: 59377
+Orders from the future (order_date > today): 0
+Customers with malformed emails (no '@'): 0
+Customers with invalid state codes: 33816
+Customers with malformed zip codes: 0
+Customers with invalid phone numbers (digits != 10 or 11): 50500
+Customers sharing the exact same email: 2982
+
+--- Outliers, Negatives, & Coercion Fails ---
+Orders with unparseable sales_amount (e.g. text/symbols): 0
+Orders with negative sales: 1249
+Orders with negative taxes: 146
+Orders where discount > sale: 1747
+Items with 0 or negative quantity: 301
+Products with 0 or negative price: 22
+Orders - sales_amount_num Statistical Outliers (IQR): 1300
+Order Items - quantity_num Statistical Outliers (IQR): 0
+Products - unit_price_num Statistical Outliers (IQR): 38

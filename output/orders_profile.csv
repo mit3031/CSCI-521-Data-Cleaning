@@ -1,0 +1,8 @@
+Attribute,Data Type,Missing Count,Missing %,Unique Values,Mode,Mean,Std,Min,25%,Median (50%),75%,Max
+order_id,int64,0,0.0,120000,1,N/A,N/A,1,N/A,N/A,N/A,120000
+customer_id,int64,0,0.0,46521,8595,N/A,N/A,1,N/A,N/A,N/A,51499
+order_date,str,400,0.33,900,2024-06-05,N/A,N/A,2023-01-01,N/A,N/A,N/A,2025-06-18
+ship_date,str,0,0.0,900,2025-05-18,N/A,N/A,2023-01-03,N/A,N/A,N/A,2025-06-20
+sales_amount,float64,0,0.0,26874,-250.0,147.99,65.17,-250.0,108.64,149.2,189.88,427.44
+tax_amount,float64,0,0.0,2589,11.26,12.01,4.0,-5.78,9.31,12.0,14.72,29.61
+discount,int64,0,0.0,5,20,10.03,7.06,0,5.0,10.0,15.0,20

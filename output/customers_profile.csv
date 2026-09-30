@@ -1,0 +1,10 @@
+Attribute,Data Type,Missing Count,Missing %,Unique Values,Mode,Mean,Std,Min,25%,Median (50%),75%,Max
+customer_id,int64,0,0.0,50000,86,N/A,N/A,1,N/A,N/A,N/A,50000
+first_name,str,0,0.0,10,James,N/A,N/A,David,N/A,N/A,N/A,Sarah
+last_name,str,0,0.0,8,Wilson,N/A,N/A,Brown,N/A,N/A,N/A,Wilson
+email,str,2020,4.0,47999,cust10088@example.com,N/A,N/A,cust10000@example.com,N/A,N/A,N/A,cust9999@example.com
+phone,str,0,0.0,50000,555-100085,N/A,N/A,555-100000,N/A,N/A,N/A,555-149999
+city,str,0,0.0,5,Syracuse,N/A,N/A,Albany,N/A,N/A,N/A,Syracuse
+state,str,0,0.0,4,NY,N/A,N/A,N.Y.,N/A,N/A,N/A,new york
+zip_code,int64,0,0.0,38347,15974,54995.33,25988.75,10004,32566.5,55042.0,77453.25,99998
+signup_date,str,0,0.0,1800,2020-08-02,N/A,N/A,2020-01-01,N/A,N/A,N/A,2024-12-04
