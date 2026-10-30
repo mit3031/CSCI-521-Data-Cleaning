@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import standardizer as std
 
 """
 Finds exact duplicates, ignoring id, and maps dropped id's to the surviving id
@@ -133,6 +134,12 @@ def run_cleaning_pipeline(raw_dir, output_dir):
     products, order_items = add_unknown_product(products, order_items)
 
     # Role B, C, D go Here
+
+    # Role C
+    customers = std.standardize_states(customers)
+    customers = std.standardize_phones(customers)
+    customers = std.standardize_text(customers)
+    products = std.standardize_categories(products)
 
     # Make all the new and improved table files and puts it into the data folder
     os.makedirs(output_dir, exist_ok=True)
