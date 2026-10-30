@@ -1,6 +1,7 @@
 import pandas as pd
 import os
 import standardizer as std
+import missing_data as missing
 
 """
 Finds exact duplicates, ignoring id, and maps dropped id's to the surviving id
@@ -133,7 +134,11 @@ def run_cleaning_pipeline(raw_dir, output_dir):
     customers, orders = add_unknown_customer(customers, orders)
     products, order_items = add_unknown_product(products, order_items)
 
-    # Role B, C, D go Here
+    # Role B
+    customers = missing.handle_missing_emails(customers)
+    orders = missing.handle_date_logic(orders)
+    customers = missing.standardize_all_dates(customers, ['signup_date'])
+    orders = missing.standardize_all_dates(orders, ['order_date', 'ship_date'])
 
     # Role C
     customers = std.standardize_states(customers)
